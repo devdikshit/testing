@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap)
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    font-size: 30;
+    background: url('bg.jpg') no-repeat top center;
+    background-size: cover;
+    height: 90vh;
+}
+
+input:focus {
+    outline:none;
+}
+
+.main{
+    position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 100%;
+     padding: 0 0 20px;
+}
+
+.form-content{
+    font-family: 'Roboto', sans-serif;
+
+    outline: none;
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.9);
+    padding: 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input{
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #863104;
+    padding: 20px;
+    color: #d66325;
+    width: 100%;
+}
+
+::-webkit-input-placeholder{
+    color:#863104;
+    font-family: 'Roboto', sans-serif;
+
+    
+}
+
+.submit{
+    margin: auto;
+    margin-top: 20px;
+    background: none;
+    text-align: center;
+    border: 2px solid #863104;
+    width: 80%;
+    padding: 10px;
+    color: #c95f25;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.form-content h1{
+    color:#bb4e13;
+    /* text-transform: uppercase; */
+    text-align: center;
+}
+#formButton{
+    /* align-content: center; */
+    margin-top: 10px;
+    background: none;
+    text-align: center;
+    border: 2px solid #ffda08;
+    box-shadow: darkslategray;
+    width: 50%;
+    padding: 7px;
+    color: #ffd726;
+    border-radius: 5px;
+    background: rgba(66, 52, 7, 0.322);
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+#form1 {
+
+    display:none;
+    
+    }
+button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 50%;
+
+}

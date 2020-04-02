@@ -1,0 +1,34 @@
+{% extends "shop/basic.html" %}
+{% load crispy_forms_tags %}
+{% block head %}
+
+    <link rel="stylesheet" href="static/shop/search.css">
+  
+
+
+{% endblock head %}
+    
+
+
+{% block body %}
+      
+  <div class="container">
+    <br><br><br>
+    <div class="jumbotron">
+      {% for i in messages%}
+      {{i}}
+      {%endfor%}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="col-md-10">
+        {{form|crispy}}
+      </div>
+      <div class="col text-center">
+      <button type="submit" class="btn btn-primary mt-3">Save Data</button>
+    </div>
+    </form>
+    
+    
+
+     
+{% endblock body%} 

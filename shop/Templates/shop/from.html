@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration From</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto&display=swap)
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    font-size: 30;
+    background: brown;
+    background-size: cover;
+    height: 90vh;
+}
+
+input:focus {
+    outline:none;
+}
+
+.main{
+    position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 100%;
+     padding: 0 0 20px;
+}
+
+.form-content{
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.9);
+    padding: 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.input{
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #863104;
+    padding: 15px;
+    color: #d66325;
+    width: 100%;
+}
+
+::-webkit-input-placeholder{
+    color:#863104;
+    font-family: 'Roboto', sans-serif;
+
+    
+}
+
+.submit{
+    margin: auto;
+    margin-top: 20px;
+    background: none;
+    text-align: center;
+    border: 2px solid #863104;
+    width: 80%;
+    padding: 10px;
+    color: #c95f25;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.form-content h1{
+    color:#bb4e13;
+    /* text-transform: uppercase; */
+    text-align: center;
+}
+#formButton{
+    /* align-content: center; */
+    margin-top: 10px;
+    background: none;
+    text-align: center;
+    border: 2px solid #ffda08;
+    box-shadow: darkslategray;
+    width: 50%;
+    padding: 7px;
+    color: #ffd726;
+    border-radius: 5px;
+    background: rgba(66, 52, 7, 0.322);
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 50%;
+
+}
+
+
+    </style>
+
+</head>
+<body>
+    <form id="form1">
+        <div class="main">
+            <div class="form-content">
+                <h1>Registration Form</h1>
+                <div class="form-input">
+                    {% csrf_token %}
+                    <input class="input" type="text" name="first_name" placeholder="First Name" required="">
+                    <input class="input" type="text" name="last_name" placeholder="Last Name" required="">
+                    <input class="input" type="text" name="user_name" placeholder="Username" required="">
+					<input class="input" type="email" name="email" placeholder="Email" required="">
+					<input class="input" type="password" name="password1" placeholder="Password" required="">
+					<input class="input" type="password" name="password2" placeholder="Confirm Password" required="">
+                </div>
+                <input class="submit" type="submit">
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>

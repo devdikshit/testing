@@ -1,0 +1,43 @@
+{% extends "shop/basic.html" %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="static/shop/search.css">
+  
+
+
+{% endblock head %}
+    
+
+
+{% block body %}
+      
+  <div class="container">
+    <br><br><br>
+    <div class="jumbotron">
+      {% for i in messages%}
+      {{i}}
+      {%endfor%}
+    <form method="post">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col">
+          <input type="text" name ="uname" class="form-control" placeholder="uname">
+        </div>
+        <div class="col">
+          <input type="password" name="pw" class="form-control" placeholder="password">
+        </div>
+      </div>
+      <div class="col mx-5 my-2">
+        <!-- <input type="button"  Name='SignUp'> -->
+       <a href="/shop/register" class="btn btn-primary col-xl-4 mx-5">SignUp</a>
+       <!-- <input type="submit"  Name='Login'> -->
+       <button type="submit"class="btn btn-primary col-xl-4 mx-5">Login</button>
+      </div>
+    </div>
+    </form>
+    
+    
+
+     
+{% endblock body%} 

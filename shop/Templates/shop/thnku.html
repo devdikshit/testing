@@ -1,0 +1,25 @@
+{% extends "shop/basic.html" %}
+
+{% block title %}
+thnku
+{% endblock title %}
+    
+{% block body %}
+      
+  <div class="container">
+    <br><br><br>
+    <p>
+      {% for i in messages%}
+      {% if user.is_authenticated%}
+
+      <h1>Thankyou For {{i}}, Welcome {{user.first_name}}</h1>
+    {%else%}
+        <h1>Thankyou For {{i}}</h1>
+        <a href="/shop/login">Click Here To login</a> 
+      {%endif%}
+      {%endfor%}
+    </p>
+
+   </div>
+    
+{% endblock body%} 
